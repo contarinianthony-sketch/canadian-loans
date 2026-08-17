@@ -140,11 +140,43 @@ body {
   </div>
 
   <div class="email-box">
-    <h2>📋 Want the Full PDF Guide?</h2>
-    <p>Get our free list: "5 Canadian Lenders That Approve Bad Credit in 2026" — with rates, terms, and insider tips.</p>
-    <input type="email" placeholder="Your email address" id="email">
-    <button class="btn-email" onclick="alert('✅ Thanks! Check your inbox.')">Send Me The Free List →</button>
-    <p style="font-size:12px; opacity:0.7; margin-top:12px;">No spam. Unsubscribe anytime.</p>
+    <h2>💰 Get Matched With a Lender</h2>
+    <p>Enter your details and get matched with a Canadian lender in minutes. Free, no obligation.</p>
+    <div id="lead-scout-form" style="max-width:800px;margin:2rem auto;background: #ffffff;border-radius: 12px;border: 1px solid rgba(58, 58, 58, 0.15);box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);overflow: hidden;"></div>
+    <script>
+    var formConfig = {
+        "affiliateCode": "0CMU8pXO",
+        "defaultValues": {
+            "requestedAmount": 1000
+        },
+        "formId": "1",
+        "language": "en",
+        "overrides": {
+            "requestedAmount": {
+                "max": 3000,
+                "min": 100,
+                "step": 100
+            }
+        },
+        "styles": {
+            "fontFamily": "\"Montserrat\", sans-serif",
+            "fullWidthFirstStepButton": true,
+            "minHeight": 0,
+            "primary": {
+                "contrastText": "#fff",
+                "dark": "#8BA868",
+                "main": "#8BA868"
+            }
+        },
+        "theme": "light"
+    };
+
+    window.LeadScout = window.LeadScout || {};
+    window.LeadScout.onLoad = function() {
+        window.LeadScout.init(document.getElementById('lead-scout-form'), formConfig);
+    }
+    </script>
+    <script src="https://app.leadscout.ca/library/library.js" async></script>
   </div>
 
   <div class="footer">
